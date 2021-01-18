@@ -1,0 +1,99 @@
+\documentclass[10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{paralist}
+%\usepackage{hyperref}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+  \Large\bfseries
+  Reproducibility: Towards using the POWDER platform for RF propagation validation 
+\end{center}
+
+We have packaged our work into a POWDER profile that enables others to
+replicate our results and to serve as a starting point for related research
+efforts. POWDER profiles are essentially parameterized
+``recipes'' that specifies the hardware and software resources required
+for the experiment in question. This ``recipe'' is used by the POWDER
+control framework to allocate and configure the resources in question. 
+POWDER profiles also contain detailed descriptions of what to
+do once the profile has been instantiated.
+In the case of the RF propagation validation profile, a number of options
+are possible:
+\begin{inparaenum}[(1)]
+\item Instantiate the profile with only compute resources and use the provided
+SPLAT! software and POWDER related configuration information to perform 
+RF propagation predictions.
+\item Instantiate the profile to include radio nodes and use the provided
+Shout measurement framework to perform RF measurements.
+\item Instantiate the profile with both compute and radio resources to perform
+a combination of the above two activities.
+\end{inparaenum}
+
+Instantiating a POWDER profile requires:
+\begin{inparaenum}[(a)]
+\item A user account on the POWDER platform.
+\item An associated POWDER project. 
+\item (Optional) For projects that require access to radio resources,
+e.g., options~2 and~3 above, the project leads need to specifically request such access
+by sending email to powder-support@powderwireless.net.  
+\end{inparaenum}
+
+To simply the process for TPC evaluation of our work we have created
+a ``cnert21reproduce'' project, which the TPC members evaluating the reproducability
+of our work can join. Specifically, for this project access to radio resources
+will already be enabled. (For completeness we also provide the slightly more involved
+set of steps that a ``general user'' would have to follow below). 
+Simplified steps for CNERT TPC:
+% to evaluate the reproducibility of our work:
+\begin{enumerate}
+\item Point your browser at: https://www.powderwireless.net and click on ``Sign Up'' button.
+\item Sign up for an account: Provide personal information on the left (be sure to include
+an ssh public key). Select the ``Join Existing Project'' option and select
+``cnert21reproduce'' as the project name. Click ``Submit Request''. (Note: If you  already
+have an account on POWDER, you can simply log in, click on your login ID at the
+top right and select ``Start/Join Project'' from the drop-down menu.)
+\item At this point you will have to wait for POWDER administrators to approve your account
+and project join request. Once your account and project join request is approved (you will
+receive email to that effect) you can return to
+https://www.powderwireless.net to log in.
+\item To instantiate the ``RF propagation validation'' profile: Point your your browser to
+profile URL and follow the four step process to create an experiment: 
+%
+
+https://www.powderwireless.net/p/PowderProfiles/rf-propagation
+\item Follow the instructions in the profile to perform the experiment.
+\end{enumerate}
+
+General instructions to instantiate RF propagation validation profile:
+\begin{enumerate}
+\item Point your browser at: https://www.powderwireless.net and click on ``Sign Up'' button.
+\item Sign up for an account: Provide personal information on the left (be sure to include
+an ssh public key). Select the ``Start New Project'' option and provide the requested
+information. Click ``Submit Request''. (Note: If you  already
+have an account on POWDER, you can simply log in, click on your login ID at the
+top right and select ``Start/Join Project'' from the drop-down menu.)
+\item At this point you will have to wait for POWDER administrators to approve your account
+and project creation request. As explained above, if you plan to make use of POWDER radio resources,
+you should send email to powder-support@powderwireless.net to make your request. 
+Once your account and project is approved (you will
+receive email to that effect) you can return to
+https://www.powderwireless.net to log in.
+\item To instantiate the ``RF propagation validation'' profile: Point your your browser to
+profile URL and follow the four step process to create an experiment: 
+%
+
+https://www.powderwireless.net/p/PowderProfiles/rf-propagation
+\item Follow the instructions in the profile to perform the experiment.
+\end{enumerate}
+
+
+%\bibliographystyle{bibtex/IEEEtran}
+%\bibliography{bibtex/IEEEabrv,bibtex/bibliography}
+
+\end{document}
+

@@ -1,0 +1,71 @@
+\documentclass[10pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{paralist}
+%\usepackage{hyperref}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+  \Large\bfseries
+  Demo Proposal: Towards using the POWDER platform for RF propagation validation 
+\end{center}
+
+POWDER (the Platform for Open Wireless Data-driven Experimental Research) is a
+facility for experimenting on the future of wireless networking in a city-scale ``living 
+laboratory''. Powder is run by the University of Utah in partnership with Salt Lake City
+and the Utah Education and Telehealth Network~\cite{b1,powderweb}.
+
+POWDER is an end-to-end platform for research on mobile wireless networks. It provides radios 
+that are programmable down to the waveform, attached to a network that can be configured by 
+the user, connected to a wide variety of compute, storage, and cloud resources. Researchers can
+use this platform to build their own wireless networks, using existing protocols or technologies 
+(such as 4G and MIMO), up-and coming ones (such as 5G and massive MIMO), or new ones 
+that they invent and build from the ground up.
+POWDER includes a variety of terrain types, building sizes, and densities, making for a dynamic 
+environment in which to perform real experiments.
+% Within the area, there will be dozens of fixed 
+%stations and a hundred couriers, such as buses and utility vehicles, carrying mobile devices 
+%around the city. 
+
+We have packaged our work into a POWDER profile that enables others to
+replicate our results and to serve as a starting point for related research
+efforts~\cite{paper_profile}. POWDER profiles are essentially parameterized
+``recipes'' that specifies the hardware and software resources required
+for the experiment in question. This ``recipe'' is used by the POWDER
+control framework to allocate and configure the resources in question. 
+POWDER profiles also contain detailed descriptions of what to
+do once the profile has been instantiated.
+
+In the case of the RF propagation validation profile a number of options
+are possible:
+\begin{enumerate}
+\item Instantiate the profile with only compute resources and use the provided
+SPLAT! software and POWDER related configuration information to perform 
+RF propagation predictions.
+\item Instantiate the profile to include radio nodes and use the provided
+Shout measurement framework to perform RF measurements.
+\item Instantiate the profile with both compute and radio resources. Perform
+a combination of the above two activities.
+\end{enumerate}
+
+For the purpose of our demo we will:
+\begin{itemize}
+\item Demonstrate how to use the profile and instantiate it into an experiment using step~3 
+above; i.e., our combined option. This entails reserving a set of radio nodes and a
+frequency range so that we can conduct our experiment. 
+\item Demonstrate how to perform RF measurements with Shout.
+\item Demonstrate how to run SPLAT!.
+\item Demonstrate how to produce a joint scatter plot of the two data sets (Shout and SPLAT!). 
+\end{itemize}
+
+%Please look at our reproducibility page for more information on how to use our POWDER profile. 
+
+\bibliographystyle{bibtex/IEEEtran}
+\bibliography{bibtex/IEEEabrv,bibtex/bibliography}
+
+\end{document}
+

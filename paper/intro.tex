@@ -1,0 +1,43 @@
+
+%%%%%%%%%
+%% Introduction
+\section{Introduction}
+
+Ever increasing demand for mobile and wireless services, combined with the
+fact that wireless spectrum is essentially a fixed resource, has led to 
+significant interest in innovative approaches to use and/or share spectrum.
+In the U.S. signifiant initiatives in this domain include the recently
+completed DARPA spectrum collaborative challenge~\cite{sc2}, dynamic spectrum
+sharing in the 3.5~GHz citizen broadband radio service (CBRS) band~\cite{fcc_cbrs},
+and more recently an NSF initiative to explore the feasibility of realizing national
+radio dynamic zones (NRDZ)~\cite{nsf_nrdz}.
+
+A key enabling component in many spectrum sharing approaches involves 
+the development of accurate RF propagation models. 
+The open and programmable nature of the POWDER (Platform for Open Wireless Data-driven Experimental Research) mobile and wireless platform, being developed and
+deployed in Salt Lake City, Utah, offers a unique environment in which to test
+and validate RF propagation models. 
+POWDER enables user controlled RF transmission/reception and provide
+tools and an experimental workflow system that simplifies wireless
+experimentation and the creation of repeatable experimental artifacts.
+In the context of validating RF propagation models, POWDER 
+offers a wide range of wireless endpoints (i.e., rooftop nodes, static nodes at 
+human height, nodes on campus shuttles and portable nodes),
+deployed across varied topological terrain (i.e., including a hilly
+campus environment, as well as a built-up urban-like setting).
+
+Our work presented here illustrate how the POWDER platform can be used to test and validate
+RF propagation models. We perform 
+RF measurements to provide a form of “ground truth”, and compared that
+with predicted RF signal strength based on RF propagation modeling.
+We specifically make use of the Shout RF measurement framework available on POWDER to perform a number of RF measurements~\cite{b2} and use SPLAT!, an open source RF signal propagation, loss, and terrain analysis tool~\cite{b3}, for propagation modeling.
+Shout enables orchestrated RF transmission and reception across the POWDER platform.
+We use Shout to perform RF measurements in Band~7 ($\sim$2600~MHz), Band~42
+($\sim$3500~MHz), and Band~43 ($\sim$3700~MHz). We make use of POWDER rooftop and
+fixed-endpoint (human height) nodes for our measurements.
+For propagation modeling SPLAT! is configured with the RF characteristics
+associated with the POWDER radios (i.e., location, antenna height and gain, transmission
+power etc.) and we use the point-to-point propagation model provided by the tool
+for our analysis.
+
+The contributions of this work are the following. We use the POWDER Shout framework to collect RF measurements on multiple bands. We use the SPLAT! tool to model corresponding RF path propagation and compare the results. We create a POWDER profile enabling other researchers to replicate both our RF measurements and propagation modeling and to serve as a starting point for future research efforts in this space.
